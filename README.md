@@ -10,4 +10,4 @@
   <li>Responsividade com Bootstrap</li>
 </ol>
 
- # LInk da aplicação (Frontend) : [Passo&Certo](https://tender-pike-198a95.netlify.app/)
+ # LInk da aplicação (Frontend) : [Passo&Certo](https://passocerto.netlify.app/)
