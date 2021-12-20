@@ -1,0 +1,65 @@
+@model IEnumerable<AgenciaViagens.Models.Usuario>
+
+@{
+    ViewData["Title"] = "Clientes";
+}
+
+<div class="titulo">
+    <h4>Lista de Clientes</h4>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.telefone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cpf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.idade)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.telefone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cpf)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idade)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.id">
+                        <img src="~/assets/pencil-square.svg" alt="Editar">
+                    </a> |
+                    <a asp-action="Details" asp-route-id="@item.id">
+                        <img src="~/assets/card-list.svg" alt="Detalhes">
+                    </a> |
+                    <a asp-action="Delete" asp-route-id="@item.id">
+                        <img src="~/assets/trash.svg" alt="Excluir">
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

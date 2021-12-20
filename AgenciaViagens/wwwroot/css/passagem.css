@@ -1,0 +1,18 @@
+.passagem{
+  -webkit-clip-path: polygon(0% 0%, 61% 0, 100% 50%, 61% 100%, 0% 100%);
+clip-path: polygon(0% 0%, 61% 0, 100% 50%, 61% 100%, 0% 100%);
+  box-shadow: 2px 2px 15px rgb(70, 69, 69);
+
+  width: 100%;
+  background: #d6d6d8;
+
+  width: 50%;
+
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+img:hover,
+a img:hover{
+  transform: scale(1.1);
+}

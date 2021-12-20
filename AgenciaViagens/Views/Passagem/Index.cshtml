@@ -1,0 +1,41 @@
+@model IEnumerable<AgenciaViagens.Models.Passagem>
+
+
+@{
+    ViewData["Title"] = "Emissão de passagem";
+    var verificarPassagens = false;
+}
+
+<div class="titulo">
+    <h4>Passagens emitidas</h4>
+</div>
+
+@foreach (var item in Model)
+{
+    verificarPassagens = true;
+
+    <div class="card passagem text-left">
+        <div class="card-body">
+            <h5 class="card-title">Nome: @Html.DisplayFor(modelItem => item.usuario.nome)</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Destino: @Html.DisplayFor(modelItem => item.viagens.destinoViagem)
+            </h6>
+            <p class="card-text">Preço: R$ @Html.DisplayFor(modelItem => item.viagens.preco)</p>
+            <p class="card-text">Taxas: @Html.DisplayFor(modelItem => item.viagens.taxas)%</p>
+
+            <a class="card-link" asp-action="Edit" asp-route-id="@item.id">
+                <img src="~/assets/pencil-square.svg" alt="Editar">
+            </a>
+            <a class="card-link" asp-action="Delete" asp-route-id="@item.id">
+                <img src="~/assets/trash.svg" alt="Excluir">
+            </a>
+        </div>
+    </div>
+
+
+}
+@if (!verificarPassagens)
+{
+    <p>Nenhuma passagem foi emitida ainda,
+        <a asp-area="" asp-controller="Passagem" asp-action="Create">emita uma nova passagem</a>
+    </p>
+}

@@ -1,0 +1,37 @@
+﻿.formulario .enviar,
+.titulo{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+div label{
+  font-family: 'Poppins', sans-serif, monospace;
+  font-weight: 400;
+}
+
+.titulo h4{
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif, monospace;
+  font-weight: 700;
+}
+
+.formulario {
+  text-align: left;
+  box-shadow: 0 0 30px rgb(70, 69, 69);
+  border-radius: 15px;
+  padding: 10px;
+}
+.formulario .enviar{
+  display: flex;
+  justify-content: center;
+}
+
+.botao-controlador{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+

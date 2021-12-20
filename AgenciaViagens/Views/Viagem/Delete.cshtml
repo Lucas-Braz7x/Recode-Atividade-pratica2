@@ -1,0 +1,41 @@
+@model AgenciaViagens.Models.Viagem
+
+@{
+    ViewData["Title"] = "Excluir Viagem";
+}
+
+<div class="titulo">
+    <h4>Excluir Viagem</h4>
+</div>
+
+<h3>Deseja remover esta viagem?</h3>
+<div>
+    <h4>Viagem</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.destinoViagem)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.destinoViagem)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.preco)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.preco)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.taxas)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.taxas)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="id" />
+        <input type="submit" value="Excluir" class="btn btn-danger" /> |
+        <a asp-action="Index">Voltar</a>
+    </form>
+</div>

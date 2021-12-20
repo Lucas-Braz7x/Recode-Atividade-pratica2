@@ -1,0 +1,40 @@
+@model IEnumerable<AgenciaViagens.Models.Viagem>
+
+@{
+  ViewData["Title"] = "Destinos";
+  var verificar = false;
+}
+
+<div class="titulo">
+  <h4>Promoções</h4>
+</div>
+
+<div class="cartao-container">
+  @foreach (var item in Model)
+  {
+    @if (item.preco < 200)
+    {
+      verificar = true;
+      <div class="card text-left" style="width: 18rem;">
+        <div class="card-body cartao-conteudo">
+          <a class="text-right promocao" asp-area="" asp-controller="Passagem" asp-action="Index">
+            <img src="~/assets/bookmark.svg" alt="Em promoção">
+          </a>
+          <h5 class="card-title">Destino: @Html.DisplayFor(modelItem => item.destinoViagem)</h5>
+          <p class="card-text">Preço: R$ @Html.DisplayFor(modelItem => item.preco)</p>
+          <p class="card-text"> Taxas: @Html.DisplayFor(modelItem => item.taxas)%</p>
+          <div class="cartao-botoes">
+            <a asp-action="Details" asp-route-id="@item.id"><img src="~/assets/card-list.svg"
+            alt="Icone de detalhes da passagem"></a>
+            <a class="btn btn-primary text-right" asp-area="" asp-controller="Passagem" asp-action="Create">Emitir
+              passagem</a>
+          </div>
+        </div>
+      </div>
+    }
+  }
+  @if (!verificar)
+  {
+    <p>Não há promoções disponíveis, confira as nossas viagens na aba destinos</p>
+  }
+</div>

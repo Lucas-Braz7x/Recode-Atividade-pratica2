@@ -1,0 +1,38 @@
+.cartao-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 5px;
+  margin-bottom: 15px;
+  justify-content: center;
+}
+
+.cartao-conteudo{
+  position: relative;
+}
+
+.promocao{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.promocao img{
+  transition: transform .5s;
+}
+
+.cartao-botoes{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cartao-botoes a img{
+  width: 30px;
+  height: 30px;
+  transition: transform .2s;
+}
+
+.promocao img:hover,
+.cartao-botoes a img:hover{
+  transform: scale(1.1);
+}

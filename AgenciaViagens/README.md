@@ -1,0 +1,10 @@
+- Continuar a página de destinos
+- Configurar rotas
+- Emitir passagens
+- Ajustar carousel
+- Ajustar hover
+- Ajustar details das viagens
+- Criar contatos
+- Definir nome da agencia
+- Definir cores
+- aplicar animações

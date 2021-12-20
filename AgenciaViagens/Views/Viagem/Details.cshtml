@@ -1,0 +1,28 @@
+@model AgenciaViagens.Models.Viagem
+
+
+
+<h4>Viagem</h4>
+<hr />
+
+<div class="card  text-left" style="width: 18rem;">
+    <div class="card-body cartao-conteudo">
+        <a class="text-right promocao" asp-area="" asp-controller="Passagem" asp-action="Index">
+            <img src="~/assets/bookmark.svg" alt="Em promoção">
+        </a>
+        <h5 class="card-title">
+            @Html.DisplayNameFor(model => model.destinoViagem): @Html.DisplayFor(model => model.destinoViagem)</h5>
+        <p class="card-text">@Html.DisplayNameFor(model => model.preco): R$ @Html.DisplayFor(model =>
+            model.preco)</p>
+        <p class="card-text"> @Html.DisplayNameFor(model => model.taxas): @Html.DisplayFor(model =>
+            model.taxas)%</p>
+        <div class="cartao-botoes">
+            <a asp-action="Edit" asp-route-id="@Model.id">
+                <img src="~/assets/pencil-square.svg" alt="Editar viagem">
+            </a>
+            <a asp-action="Delete" asp-route-id="@Model.id">
+                <img src="~/assets/trash.svg" alt="Excluir viagem">
+            </a>
+        </div>
+    </div>
+</div>

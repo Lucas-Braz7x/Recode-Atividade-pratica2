@@ -1,0 +1,49 @@
+@model AgenciaViagens.Models.Usuario
+
+@{
+    ViewData["Title"] = "Detalhes Clientes";
+}
+
+<div class="titulo">
+    <h4>Detalhes do Cliente</h4>
+</div>
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <dl class="row text-left">
+        <dt class="col-sm-2 ">
+            @Html.DisplayNameFor(model => model.nome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.telefone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.telefone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.cpf)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.cpf)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.idade)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.idade)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.id">Editar</a> |
+    <a asp-action="Index">Voltar</a>
+</div>

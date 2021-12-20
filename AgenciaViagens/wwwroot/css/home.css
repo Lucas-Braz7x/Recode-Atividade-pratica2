@@ -1,0 +1,72 @@
+main{
+  z-index: -100;
+}
+
+.bg-viagem{
+  height: 300px;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  margin-bottom: 30px;
+
+  width: 100vw;
+  z-index: -1;
+
+  background: linear-gradient(rgba(0,0,0, .2), rgba(0,0,0, .3) ), url(../assets/bg-viagem.jpg) no-repeat center;
+  box-shadow: 0 0 15px rgb(70, 69, 69);
+  text-shadow: 0 0 2px rgb(70, 69, 69);
+  font-weight: bold;
+  
+
+}
+
+.pacote-viagens{
+  position: relative;
+
+  margin-top: 300px;
+  padding: 10px 0;
+}
+.pacote-viagens h2{
+  margin: 15px 0;
+}
+.carousel-viagens{
+  box-shadow: 0 0 15px rgb(70, 69, 69);
+  border-radius: 30px;
+}
+
+.imagem4,
+.imagem3,
+.imagem2,
+.imagem1{
+  height: 600px;
+  border-radius: 30px;
+}
+
+.imagem1{
+  background: linear-gradient(rgba(0,0,0, .2), rgba(0,0,0, .3) ), url(../assets/carousel-image01.jpg) no-repeat center;
+}
+
+.imagem2{
+  background: linear-gradient(rgba(0,0,0, .2), rgba(0,0,0, .3) ), url(../assets/carousel-image02.jpg) no-repeat center;
+}
+.imagem3{
+  background: linear-gradient(rgba(0,0,0, .2), rgba(0,0,0, .3) ), url(../assets/carousel-image03.jpg) no-repeat center;
+}
+.imagem4{
+  background: linear-gradient(rgba(0,0,0, .2), rgba(0,0,0, .3) ), url(../assets/carousel-image04.jpg) no-repeat center;
+}
+
+
+.sobre{
+  border-top: 1px solid rgb(219, 219, 219) ;
+  margin-top: 30px;
+  padding-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .bg-viagem h1{
+    margin-top: 20px;
+    font-size: 1.5rem;
+    
+  }
+}

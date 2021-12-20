@@ -1,0 +1,48 @@
+@model AgenciaViagens.Models.Usuario
+
+@{
+    ViewData["Title"] = "Editar Clientes";
+}
+
+<div class="titulo">
+    <h4>Editar Informação</h4>
+</div>
+
+<h4>Usuario</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group text-left">
+                <label asp-for="nome" class="control-label">Nome:</label>
+                <input asp-for="nome" class="form-control" />
+                <span asp-validation-for="nome" class="text-danger"></span>
+            </div>
+            <div class="form-group text-left">
+                <label asp-for="email" class="control-label">Email:</label>
+                <input asp-for="email" type="email" class="form-control" />
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+            <div class="form-group text-left">
+                <label asp-for="telefone" class="control-label"></label>
+                <input asp-for="telefone" minlength="11" maxlength="12" class="form-control" />
+                <span asp-validation-for="telefone" class="text-danger"></span>
+            </div>
+            <div class="form-group text-left">
+                <label asp-for="cpf" class="control-label">CPF:</label>
+                <input asp-for="cpf" minlength="11" class="form-control" />
+                <span asp-validation-for="cpf" class="text-danger"></span>
+            </div>
+            <div class="form-group text-left">
+                <label asp-for="idade" class="control-label">Idade:</label>
+                <input asp-for="idade" min="18" max="120" class="form-control" />
+                <span asp-validation-for="idade" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="id" />
+            <div class="form-group text-left">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

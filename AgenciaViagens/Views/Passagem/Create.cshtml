@@ -1,0 +1,38 @@
+@model AgenciaViagens.Models.Passagem
+
+@{
+    ViewData["Title"] = "Emissão de passagem";
+}
+
+<div class="titulo">
+    <h4>Emissão de passagem</h4>
+</div>
+
+<div class="d-flex justify-content-center row">
+    <div class="col-md-4 formulario">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group text-left">
+                <label asp-for="usuarioId" class="control-label">Cliente: </label>
+                <select asp-for="usuarioId" class="form-control" asp-items="ViewBag.usuarioId"></select>
+            </div>
+            <div class="form-group text-left">
+                <label asp-for="viagemId" class="control-label">Destino: </label>
+                <select asp-for="viagemId" class="form-control" asp-items="ViewBag.viagemId"></select>
+            </div>
+            <div class="form-group ">
+                <input type="submit" value="Cadastrar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="botao-controlador">
+    <a class="nav-link text-dark" aria-describedby="Listar usuários cadastrados" asp-area="" asp-controller="Home"
+        asp-action="Index">
+        <img src="~/assets/arrow_circle_left.svg" alt="">
+    </a>
+    <a aria-label="Listar usuários cadastrados" asp-action="Index">
+        <img src="~/assets/arrow_circle_right.svg" alt="">
+    </a>
+</div>
