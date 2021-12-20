@@ -1,0 +1,100 @@
+@media (max-width: 785px) {
+  .cartao-bemVindo{
+    margin-top: 20px;
+    font-size: .9rem;
+  }
+  .cartao-bemVindo h1{
+    font-size: 1.2rem;
+  }
+  .cartao-bemVindo h2{
+    font-size: 1.1rem;
+  }
+  .planejamento{
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+  .formulario-lateral{
+    display: none;
+    opacity: none;
+  }
+  .formulario-container{
+    justify-content: center;
+    box-shadow: none;
+  }
+  .formulario-cadastro{
+    box-shadow: 0 20px 50px rgba(0,0,0,.4);    
+  }
+}
+
+@media (max-width: 720px) {
+  .cartao-bemVindo{
+    margin-top: 20px;
+    font-size: .9rem;
+  }
+  .cartao-bemVindo h1{
+    font-size: 1.2rem;
+  }
+  .cartao-bemVindo h2{
+    font-size: 1.1rem;
+  }
+  .cartao-bemVindo p{
+    display: none;
+  }
+  .formulario-input{
+    width: 100%;
+  }
+
+  footer{
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  nav{
+    flex-direction: column;
+    font-size: .8rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .cartao-bemVindo{
+    margin-top: 10px;
+    font-size: .7rem;
+  }
+  .formulario-cadastro{
+    width: 280px;
+    font-size: .7rem;
+  }
+  .planejamento img{
+    width: 300px;
+  }
+}
+
+@media (max-width: 450px) {
+  .cartao-bemVindo h2,
+  .cartao-bemVindo h1{
+
+    font-size: .7rem;
+  }
+  .cartao-planejamento{
+    width: 200px;
+  }
+  .cartao-planejamento h3{
+    font-size: .7rem;
+  }
+
+  footer p,
+  .cartao-planejamento a,
+  .cartao-planejamento span,
+  .cartao-planejamento h4{
+    font-size: .6rem;
+  }
+
+  footer img{
+    width: 15px;
+  }
+
+  ul{
+    gap: 30px;
+  }
+}

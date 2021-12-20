@@ -1,0 +1,51 @@
+.contatos{
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contatos h1{
+  font-size: 2rem;
+  color: #838485;
+}
+.contatos p{
+  color: #838485;
+}
+
+.contatos-icones{
+  display: flex;
+  gap: 50px;
+  margin-top: 30px;
+  padding: 100px;
+
+}
+
+.contatos-icones a img{
+  width: 50px;
+  cursor: pointer;
+  transition: transform .3s;
+}
+
+.contatos-icones a img:hover{
+  transform: scale(1.1);
+}
+
+.github{
+  filter: drop-shadow(0 0 5px #000);
+}
+.linkedin{
+  filter: drop-shadow(0 0 5px #0e76a8);
+}
+.instagram{
+  filter: drop-shadow(0 0 5px #dd2a7b);
+}
+.facebook{
+  filter: drop-shadow(0 0 5px  #3b5999);
+
+}
+.whatsapp{
+  filter: drop-shadow(0 0 5px #00bb2d);
+}

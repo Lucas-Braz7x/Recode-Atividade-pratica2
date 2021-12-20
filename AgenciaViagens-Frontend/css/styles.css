@@ -1,0 +1,322 @@
+/*#0E153C*/
+/*Configurações gerais*/
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html{
+  overflow-x: hidden;
+}
+
+a{
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+  display: flex;
+  gap: 50px;
+}
+
+.container{
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: relative;
+  padding-bottom: 100px;
+}
+
+/*Cabeçalho*/
+header{
+  width: 100%;
+  height: 40px;
+  background: #0E153C;
+
+  box-shadow: 0 0 15px #7a7a7a;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px 50px;
+}
+
+
+.menu-opcoes li:hover{
+  transform: scale(1.1);
+}
+
+.logo a,
+.menu-opcoes li a{
+  color: #ffffff;
+  font-weight: bold;
+  transition: .5s;
+}
+
+.logo a:hover,
+.menu-opcoes li a:hover{
+  color: #838485;
+  transform: scale(.5);
+  filter: brightness(1.1);
+  border-bottom: 1px solid #eeeeee;
+}
+
+/*Conteúdo principal*/
+main{
+  width: 100%;
+  perspective: 2px;
+  transform-style: preserve-3d;
+}
+
+.home-fundo{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.home-fundo img{
+  width: 80%;
+  height: 80%;
+  filter: drop-shadow(2px 2px 15px #838485);
+}
+
+.cartao-bemVindo{
+  z-index: 100;
+  position: absolute;
+  text-align: center;
+  margin-top: 40px;
+  padding: 5px;
+
+  background: rgba(255,255,255, .100);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  
+  border-radius: 10px;
+}
+
+.planejamento{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+  padding: 0 ;
+}
+
+.planejamento img{
+  width: 500px;
+  filter: drop-shadow(0px 0px 5px #838485);
+
+}
+
+.cartao-planejamento{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
+  width: 250px;
+
+  padding: 30px;
+
+  box-shadow: 0 0 30px #838485;
+  border-radius: 25px;
+}
+.cartao-planejamento h4{
+  text-align: left;
+}
+
+.cartao-planejamento a{
+  border-radius: 25px;
+  border: 1px solid #0E153C;
+  box-shadow: 0 0 5px #0E153C;
+
+  color: #eee;
+  background: #40497c;
+
+  text-align: center;
+  font-weight: bold;
+
+  padding: 2px;
+  transition: .4s;
+}
+
+.cartao-planejamento a:hover{
+  filter: brightness(1.1);
+  text-shadow: 0 0 5px #fff;
+  transform: scale(1.1);
+  z-index: 1000;
+  perspective: 1000;
+}
+
+
+
+
+/*Formulário*/
+
+.formulario{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.formulario-container{
+  display: flex;
+  
+  width: 800px;
+  height: 550px;
+  margin-top: 40px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.4);
+  transition: opacity 2s;
+}
+
+.formulario-cadastro{
+  width: 50%;
+  background: #0E153C;
+  padding: 120px 50px;
+  box-sizing: border-box;
+}
+
+.formulario-input{
+  width: 300px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #cc683c;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  margin-bottom: 50px;
+  outline: none;
+  padding: 10px 0;
+  transition: border-bottom-color .8s;
+}
+
+.formulario-input:focus{
+  border-bottom-color: #cc683c;
+}
+
+.formulario-cadastro p{
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 200;
+  margin-bottom: 8px;
+}
+
+.formulario-cadastro label{
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+.formulario-cadastro input[type="checkbox"]{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 15px;
+  background: #eee;
+  outline: none;
+  border-radius: 20px;
+  margin: 0 8px;
+  box-shadow: inset 0 0 10px rgba(0,0,0, .4);
+  position: relative;
+  transition: background .5s;
+}
+
+.formulario-cadastro input:checked[type="checkbox"]{
+  background: #cc683c;
+}
+
+.formulario-cadastro input[type="checkbox"]::before{
+  content: '';
+  width: 17px;
+  height: 17px;
+  background: #aaa;
+  position: absolute;
+  border-radius: 50%;
+  top: -1px;
+  left: -4px;
+  box-shadow: 0 2px 5px rgba(0,0,0, .4); 
+  transition: left .5s;
+}
+
+.formulario-cadastro input:checked[type="checkbox"]::before{
+  left: 18px;
+}
+
+
+.formulario-cadastro button{
+  display: block;
+  margin-top: 80px;
+  width: 150px;
+  padding: 8px 5px;
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  outline: none;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.formulario-lateral{
+  width: 50%;
+  background: linear-gradient(to top, rgba(0,0,0, .4), rgba(0,0,0, .2)), url('../assets/notifications.svg') bottom no-repeat;
+  background-size: contain;
+  box-shadow: -10px 0 30px rgba(0,0,0, .3);
+  position: relative
+}
+
+.formulario-lateral h2{
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/*Rodapé*/
+
+footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  box-shadow: 0 0 30px #838485;
+
+  height: 100px;
+  width: 100%;
+  transition: transform .3s;
+  background: #eeeeee;
+
+}
+
+footer img{
+  width: 20px;
+}
+
+footer img:hover{
+  transform: scale(1.3);
+}
